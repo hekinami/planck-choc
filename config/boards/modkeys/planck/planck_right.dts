@@ -2,7 +2,7 @@
 
 
 &default_transform {
-	col-offset = <22>;
+	col-offset = <24>;
 };
 &right_encoder {
     status = "okay";

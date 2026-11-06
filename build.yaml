@@ -1,5 +1,6 @@
 ---
 include:
   - board: planck_left
+    snippet: studio-rpc-usb-uart
   - board: planck_right
 

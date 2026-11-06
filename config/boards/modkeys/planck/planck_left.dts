@@ -9,9 +9,16 @@
   	kscan = <&kscan0>;
 };
 
+&zephyr_udc0 {
+	snippet_studio_rpc_usb_uart: snippet_studio_rpc_usb_uart {
+		compatible = "zephyr,cdc-acm-uart";
+	};
+};
+
 / {
 	chosen {
 		zmk,physical-layout = &matrix_physical_layout;
+		zmk,studio-rpc-uart = &snippet_studio_rpc_usb_uart;
 	};
 	kscan0: kscan {
 		compatible = "zmk,kscan-gpio-direct";
