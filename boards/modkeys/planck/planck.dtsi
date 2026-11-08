@@ -6,6 +6,7 @@
 
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
+#include <common/nordic/nrf52840_uf2_boot_mode.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
 
@@ -114,6 +115,14 @@ sensors: sensors {
         sensors = <&left_encoder &right_encoder >;
         triggers-per-rotation = <15>;
     };
+};
+
+&reg0 {
+    status = "okay";
+};
+
+&reg1 {
+    regulator-initial-mode = <NRF5X_REG_MODE_DCDC>;
 };
 
 &adc {
