@@ -1,6 +1,9 @@
 ---
 include:
   - board: planck_left
+    shield: settings_reset
+    artifact-name: settings_reset
+  - board: planck_left
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: planck_right
